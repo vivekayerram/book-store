@@ -1,0 +1,85 @@
+<mvc:View
+	controllerName="bookstore.controller.Object"
+	xmlns:m="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.uxap" xmlns:layout="sap.ui.layout"
+	xmlns:semantic="sap.f.semantic">
+
+    	<m:Page id="page" showNavButton="true"  icon="sap-icon://home"  navButtonPress="onNavBack5" title="books overview">
+		<m:content>
+			<ObjectPageLayout id="ObjectPageLayout" showTitleInHeaderContent="true" upperCaseAnchorBar="false">
+				<headerTitle>
+					<ObjectPageDynamicHeaderTitle>
+						<expandedHeading>
+							<m:Title text="{title}" wrapping="true"/>
+						</expandedHeading>
+						<snappedHeading>
+							<m:FlexBox fitContainer="true" alignItems="Center">
+								<m:Title text="{title}" wrapping="true"/>
+							</m:FlexBox>
+						</snappedHeading>
+						
+					</ObjectPageDynamicHeaderTitle>
+				</headerTitle>
+				<headerContent>
+					<m:FlexBox wrap="Wrap">
+						<layout:VerticalLayout class="sapUiMediumMarginBeginEnd">
+                        <m:ObjectStatus title="author" text="{authorName}"/>
+							<m:ObjectStatus title="Language" text="{Language}"/>
+							<m:ObjectStatus title="Stock" text="{stock}"/>
+							<m:ObjectStatus title="price" text="{price}"/>
+						</layout:VerticalLayout>
+
+						<layout:VerticalLayout class="sapUiMediumMarginBeginEnd">
+							<layout:layoutData>
+								<ObjectPageHeaderLayoutData visibleS="false" visibleM="false"/>
+							</layout:layoutData>
+				
+						</layout:VerticalLayout>
+					</m:FlexBox>
+				</headerContent>
+				<sections>
+					<ObjectPageSection titleUppercase="false" showTitle="true" title="Description">
+						<subSections>
+							<ObjectPageSubSection title="Descrption" titleUppercase="false">
+								<blocks>
+									<m:Text text="{descr}"></m:Text>
+								</blocks>
+							</ObjectPageSubSection>
+						</subSections>
+					</ObjectPageSection>
+				</sections>
+			</ObjectPageLayout>
+		</m:content>
+	</m:Page>
+
+	<!-- <semantic:SemanticPage
+		id="page"
+		headerPinnable="false"
+		toggleHeaderOnTitleClick="false"
+		busy="{objectView>/busy}"
+		busyIndicatorDelay="{objectView>/delay}">
+
+		<semantic:titleHeading>
+			<Title text="{title}" />
+		</semantic:titleHeading>
+
+		<semantic:headerContent>
+			<ObjectNumber
+				number="{
+					path: 'price',
+					formatter: '.formatter.numberUnit'
+				}"
+			/>
+		</semantic:headerContent>
+
+		<semantic:sendEmailAction>
+			<semantic:SendEmailAction id="shareEmail" press=".onShareEmailPress"/>
+		</semantic:sendEmailAction>
+
+
+	</semantic:SemanticPage> -->
+  
+
+</mvc:View>

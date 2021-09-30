@@ -1,0 +1,18 @@
+GET http://localhost:4004/catalog/Books
+
+###
+GET http://localhost:4004/catalog/Authors
+
+###
+POST http://localhost:4004/catalog/Authors
+Content-Type: application/json
+
+{
+    "ID":1,
+    "name":"A. P. J. Abdul Kalam",
+    "dateOfBirth":"1931-10-15",
+    "dateOfDeath":"2015-07-27",
+    "placeOfBirth": "Rameswaram, India",
+    "placeOfDeath": "Shillong, Meghalaya, India"
+}
+
