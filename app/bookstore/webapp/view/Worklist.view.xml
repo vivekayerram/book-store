@@ -12,8 +12,9 @@
 		<semantic:titleHeading>
 			<Title text="{i18n>worklistTitle}" />
 		</semantic:titleHeading>
-
+	
 		<semantic:content>
+        <Image src="images/bookshop.jpg" width="100%"></Image>
 			<Table
 				id="table"
 				width="auto"
